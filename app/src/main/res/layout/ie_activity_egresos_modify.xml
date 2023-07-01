@@ -9,123 +9,122 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonIngresos"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:background="@drawable/ie_boton_ingresos_trans_redondeado"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/inter"
         android:text="INGRESOS"
         android:textColor="#FFFFFF"
-        app:cornerRadius="8dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="142dp" />
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonGastos"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:background="@drawable/ie_boton_gastos_redondeado"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/inter"
         android:text="GASTOS"
         android:textColor="#FFFFFF"
-        app:cornerRadius="8dp"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="142dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="91dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#000000"
+        android:textSize="22sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="323dp"
-        tools:layout_editor_absoluteY="86dp" />
+        android:text="Texto"
+        android:textColor="#80000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra"
+        app:layout_constraintHorizontal_bias="0.1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto"
+        android:textColor="#80000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra"
+        app:layout_constraintHorizontal_bias="0.9" />
 
     <View
-        android:layout_width="match_parent"
+        android:id="@+id/barra"
+        android:layout_width="0dp"
         android:layout_height="67dp"
         android:background="#059561"
-        app:layout_constraintEnd_toStartOf="@+id/buttonGastos"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toEndOf="@+id/buttonIngresos"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
-        android:layout_width="390dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ie_boton_redondeado"
-        android:fontFamily="@font/montserrat"
-        android:text="+ Servicios"
-        android:textAlignment="textStart"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="214dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button7"
-        android:layout_width="390dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ie_boton_redondeado"
-        android:fontFamily="@font/montserrat"
-        android:text="+ Entretenimiento"
-        android:textAlignment="textStart"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="274dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button9"
+    <Button
+        android:id="@+id/button4"
         android:layout_width="390dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ie_boton_redondeado"
-        android:fontFamily="@font/montserrat"
+        android:layout_height="50dp"
+        android:layout_marginBottom="488dp"
+        android:backgroundTint="#159897"
+        android:fontFamily="@font/roboto"
         android:text="+ AÑADIR CATEGORIA"
         android:textAlignment="textStart"
-        android:textSize="14sp"
+        android:textColor="#1F1F25"
+        android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="409dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
-        android:layout_width="390dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ie_boton_redondeado"
-        android:fontFamily="@font/montserrat"
-        android:text="+ Viajes"
-        android:textAlignment="textStart"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="336dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
+        app:layout_constraintVertical_bias="1.5"
+        app:layout_marginTop="4dp" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/ie_textview_redondeado"
+        android:elevation="6dp"
         android:fontFamily="@font/montserrat"
-        android:text="TextView"
+        android:text="Total: S/."
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="660dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:layout_width="30dp"

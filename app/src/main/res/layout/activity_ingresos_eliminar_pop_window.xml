@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFFF4"
-    tools:context="RegistrarIE.EgresosEliminarPopWindowActivity">
-
+    tools:context="RegistrarIE.IngresosEliminarPopWindowActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -50,4 +49,5 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="156dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
