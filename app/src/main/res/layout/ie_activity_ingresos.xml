@@ -61,13 +61,13 @@
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintVertical_bias="0.05"
         android:layout_width="390dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:backgroundTint="#159897"
         android:fontFamily="@font/roboto"
         android:text="+ AÑADIR CATEGORIA"
         android:textAlignment="textStart"
         android:textColor="#1F1F25"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
@@ -108,12 +108,13 @@
         app:layout_constraintTop_toBottomOf="@+id/barra"
         app:layout_constraintHorizontal_bias="0.9"/>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:backgroundTint="#124958"
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#123946"
         android:src="@drawable/ie_casita"
-        android:tint="#FFFFFF"
+        android:contentDescription="Home"
+        app:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/barra"
@@ -121,17 +122,18 @@
         app:layout_constraintHorizontal_bias="0.05" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:backgroundTint="#124958"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#123946"
         android:rotation="90"
         android:src="@drawable/ie_puntitos"
+        android:contentDescription="Settings"
         app:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/barra"
         app:layout_constraintBottom_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.95"  />
+        app:layout_constraintHorizontal_bias="0.97"  />
 
     <TextView
         android:id="@+id/textView6"
