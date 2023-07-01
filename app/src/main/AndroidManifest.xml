@@ -83,7 +83,7 @@
             android:name="RegistrarIE.IngresosModifyActivity"
             android:exported="false" />
         <activity
-            android:name="RegistrarIE.registrarIngreso"
+            android:name="RegistrarIE.IngresosActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
