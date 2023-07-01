@@ -9,26 +9,28 @@
 
     <View
         android:id="@+id/viewPresupuesto"
-        android:layout_width="387dp"
-        android:layout_height="89dp"
+        android:layout_width="384dp"
+        android:layout_height="101dp"
         android:background="@drawable/rjp_presupuesto_redondeado"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintVertical_bias="0.64" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="415dp"
-        android:layout_height="576dp"
+        android:layout_width="416dp"
+        android:layout_height="599dp"
         android:layout_marginTop="155dp"
         android:background="#159897"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/editTextText"
@@ -84,7 +86,7 @@
         android:layout_height="155dp"
         android:layout_marginStart="37dp"
         android:layout_marginTop="120dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="17dp"
         android:layout_marginBottom="301dp"
         android:background="@drawable/rjp_contenedor_redondeado"
         app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -95,11 +97,11 @@
     <View
         android:id="@+id/view3"
         android:layout_width="380dp"
-        android:layout_height="149dp"
-        android:layout_marginStart="14dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="330dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/rjp_graph_redondeado"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -142,8 +144,10 @@
         android:text="             REGRESAR"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
