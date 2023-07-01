@@ -99,13 +99,13 @@
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintVertical_bias="0.05"
         android:layout_width="390dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:backgroundTint="#159897"
         android:fontFamily="@font/roboto"
         android:text="+ AÑADIR CATEGORIA"
         android:textAlignment="textStart"
         android:textColor="#1F1F25"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
@@ -125,10 +125,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
         android:src="@drawable/ie_trash"
+        android:contentDescription="Delete"
         app:layout_constraintBottom_toBottomOf="@+id/barra"
         app:layout_constraintTop_toTopOf="@+id/barra"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,10 +138,11 @@
         app:tint="#FFFEFE" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
         android:src="@drawable/ie_pencil"
+        android:contentDescription="Edit"
         app:layout_constraintBottom_toBottomOf="@+id/barra"
         app:layout_constraintTop_toTopOf="@+id/barra"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,9 +152,10 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
+        android:contentDescription="Cancel"
         app:tint="#FFFFFF"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
         app:layout_constraintBottom_toBottomOf="@+id/barra"
