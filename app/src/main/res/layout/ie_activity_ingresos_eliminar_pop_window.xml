@@ -37,7 +37,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ie_boton_gastospop_redondeado"
+        android:background=""
         android:fontFamily="@font/roboto"
         android:text="Aceptar"
         android:textColor="#018153"
@@ -52,7 +52,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ie_boton_gastospop_redondeado"
+        android:background=""
         android:fontFamily="@font/roboto"
         android:text="Cancelar"
         android:textColor="#018153"

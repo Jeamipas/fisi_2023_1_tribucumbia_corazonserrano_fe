@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFFF4"
-    tools:context="RegistrarIE.registrarIngreso">
+    tools:context="RegistrarIE.IngresosActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:backgroundTint="#124958"
+        android:background="@drawable/ie_boton_gastos_redondeado"
         android:fontFamily="@font/inter"
         android:text="INGRESOS"
         android:textColor="#FFFFFF"
@@ -25,12 +26,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
 
-    <Button
-        android:id="@+id/button2"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGastos"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:backgroundTint="#80124958"
         android:elevation="20dp"
+        android:background="@drawable/ie_boton_gastos_redondeado"
         android:fontFamily="@font/inter"
         android:text="GASTOS"
         android:textColor="#FFFFFF"
@@ -53,18 +55,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button9"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnACategoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/btnGastos"
         app:layout_constraintVertical_bias="0.05"
         android:layout_width="390dp"
         android:layout_height="50dp"
         android:backgroundTint="#159897"
+        android:background="@drawable/ie_boton_redondeado"
         android:fontFamily="@font/roboto"
-        android:text="+ AÑADIR CATEGORIA"
+        android:text="  + AÑADIR CATEGORIA"
         android:textAlignment="textStart"
         android:textColor="#1F1F25"
         android:textSize="18sp"
@@ -77,7 +80,7 @@
         android:textColor="#80000000"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnGastos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barra"
@@ -90,7 +93,7 @@
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnGastos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barra" />
@@ -102,13 +105,13 @@
         android:textColor="#80000000"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnGastos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barra"
         app:layout_constraintHorizontal_bias="0.9"/>
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#123946"
@@ -121,7 +124,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/barra"
         app:layout_constraintHorizontal_bias="0.05" />
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#123946"
