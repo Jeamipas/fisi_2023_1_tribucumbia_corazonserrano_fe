@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IngresoGastos"
         tools:targetApi="31">
         <activity
+            android:name="RegistrarIE.IngresosModifyActivity"
+            android:exported="false" />
+        <activity
             android:name="RegistrarIE.registrarIngreso"
             android:exported="false" />
         <activity
