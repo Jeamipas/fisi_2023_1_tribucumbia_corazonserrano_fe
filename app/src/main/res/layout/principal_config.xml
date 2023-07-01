@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".configuracion.hola.MainActivity3">
+    tools:context="Configuracion.MainActivity3">
 
 
     <LinearLayout
@@ -121,7 +121,6 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/languages"
                 android:paddingStart="16dp" />
 
         </LinearLayout>
@@ -151,7 +150,6 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/currencies"
                 android:paddingStart="16dp" />
         </LinearLayout>
 
