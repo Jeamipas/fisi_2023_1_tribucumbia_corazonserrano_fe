@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFFFF4"
+    tools:context=".Egresos.EgresosModifyActivity">
+
+    <Button
+        android:id="@+id/buttonIngresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ie_boton_ingresos_trans_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="INGRESOS"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="8dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <Button
+        android:id="@+id/buttonGastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ie_boton_gastos_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="GASTOS"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="8dp"
+        tools:layout_editor_absoluteX="277dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="86dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#059561"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGastos"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/buttonIngresos"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_boton_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="+ Servicios"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_boton_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="+ Entretenimiento"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_boton_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="+ AÑADIR CATEGORIA"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_boton_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="+ Viajes"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="336dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ie_boton_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="660dp" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#059561"
+        android:src="@drawable/ie_trash"
+        android:tint="#FFFEFE"
+        tools:layout_editor_absoluteX="370dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#059561"
+        android:src="@drawable/ie_pencil"
+        android:tint="#FFFEFE"
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#059561"
+        android:tint="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

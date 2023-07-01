@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ToolbarColor">#123946</color>
+    <color name="BackgroundButton">#175A6C</color>
+    <color name="CardProfile">#126A74</color>
+    <color name="CardIncome">#E0FBF8</color>
+    <color name="ProgressBarIndicator">#1FD5BE</color>
+    <color name="ProgressBarTrack">#159897</color>
+
+    <color name="Salario">#1FD5BE</color>
+    <color name="Alquiler">#3B82F6</color>
+    <color name="Otros">#6366F1</color>
+    <color name="Inversiones">#EC4899</color>
+    <color name="Subvenciones">#F59E0B</color>
+    <color name="Bonificaciones">#FACC15</color>
 </resources>
