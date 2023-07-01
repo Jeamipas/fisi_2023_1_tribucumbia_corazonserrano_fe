@@ -7,6 +7,6 @@ import com.example.ingresogastos.R
 class registrarIngreso : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registrar_ingreso)
+        setContentView(R.layout.activity_main)
     }
 }
