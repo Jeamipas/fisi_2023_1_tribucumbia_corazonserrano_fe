@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFFF4"
-    tools:context="RegistrarIE.EgresosPopWindowActivity">
+    tools:context="RegistrarIE.CategoriaPopWindowActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
-        android:text="Gasto"
+        android:text="Categoría"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="49dp" />
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="50dp" />
 
     <EditText
         android:layout_width="250dp"
@@ -33,29 +33,11 @@
         android:layout_height="40dp"
         android:background="@drawable/ie_text_redondeado"
         android:fontFamily="@font/montserrat"
-        android:text="Monto"
+        android:text="Presupuesto"
         android:textColor="#80000000"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="182dp" />
 
-    <EditText
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ie_text_redondeado"
-        android:text="Fecha"
-        android:textColor="#80000000"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="251dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#EFFFF4"
-        android:src="@android:drawable/ic_menu_my_calendar"
-        android:tint="#000000"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="251dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
@@ -65,6 +47,6 @@
         android:text="Aceptar"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="341dp" />
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="248dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

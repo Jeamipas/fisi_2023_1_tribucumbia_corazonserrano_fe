@@ -13,6 +13,35 @@
         android:theme="@style/Theme.IngresoGastos"
         tools:targetApi="31">
         <activity
+            android:name="RegistrarIE.EgresosEliminarPopWindowActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="RegistrarIE.CategoriaPopWindowActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.TemaPopUp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="RegistrarIE.EgresosActivity"
+            android:exported="false" />
+        <activity
+            android:name="RegistrarIE.EgresosModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name="RegistrarIE.EgresosPopWindowActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.TemaPopUp" />
+        <activity
             android:name="RegistrarIE.IngresosModifyActivity"
             android:exported="false" />
         <activity

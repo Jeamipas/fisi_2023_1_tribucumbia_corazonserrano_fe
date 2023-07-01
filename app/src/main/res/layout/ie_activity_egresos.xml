@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFFF4"
-    tools:context=".MainActivity">
+    tools:context="RegistrarIE.EgresosActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteX="46dp"
         tools:layout_editor_absoluteY="142dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonGastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         tools:layout_editor_absoluteX="365dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="390dp"
         android:layout_height="40dp"
@@ -95,7 +95,7 @@
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="214dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button7"
         android:layout_width="390dp"
         android:layout_height="40dp"
@@ -108,7 +108,7 @@
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="274dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button9"
         android:layout_width="390dp"
         android:layout_height="40dp"
@@ -121,7 +121,7 @@
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="409dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
         android:layout_width="390dp"
         android:layout_height="40dp"
@@ -138,7 +138,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ie_boton_redondeado"
+        android:background="@drawable/ie_textview_redondeado"
         android:fontFamily="@font/montserrat"
         android:text="TextView"
         android:textSize="24sp"
