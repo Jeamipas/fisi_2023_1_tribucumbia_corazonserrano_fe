@@ -4,8 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Egresos.EgresosPopWindowActivity">
+    android:background="#EFFFF4"
+    tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Gasto"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="54dp" />
 
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="Nombre"
+        android:textColor="#80000000"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:fontFamily="@font/montserrat"
+        android:text="Monto"
+        android:textColor="#80000000"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:text="Fecha"
+        android:textColor="#80000000"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#EFFFF4"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:tint="#000000"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#126A74"
+        android:fontFamily="@font/montserrat"
+        android:text="Aceptar"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="341dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

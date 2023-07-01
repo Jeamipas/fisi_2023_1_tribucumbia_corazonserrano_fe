@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFFF4"
-    tools:context=".Egresos.EgresosActivity">
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/buttonIngresos"
@@ -67,7 +67,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:backgroundTint="#123946"
-        android:src="@drawable/casita"
+        android:src="@drawable/ie_casita"
         android:tint="#FFFEFE"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -77,7 +77,7 @@
         android:layout_height="30dp"
         android:backgroundTint="#123946"
         android:rotation="90"
-        android:src="@drawable/settigns"
+        android:src="@drawable/ie_puntitos"
         android:tint="#FFFEFE"
         tools:layout_editor_absoluteX="365dp"
         tools:layout_editor_absoluteY="16dp" />
