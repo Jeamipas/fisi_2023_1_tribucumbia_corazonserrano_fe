@@ -91,7 +91,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="Nombre"
                 android:paddingStart="16dp" />
         </LinearLayout>
@@ -120,7 +120,7 @@
 
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:paddingStart="16dp" />
 
         </LinearLayout>
@@ -149,7 +149,7 @@
 
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:paddingStart="16dp" />
         </LinearLayout>
 
