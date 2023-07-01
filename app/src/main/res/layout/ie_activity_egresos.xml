@@ -24,8 +24,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
-        app:layout_constraintVertical_bias="1.5"
-        app:layout_marginTop="4dp" />
+        app:layout_constraintVertical_bias="1.5" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonIngresos"
@@ -109,11 +108,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:backgroundTint="#124958"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#123946"
         android:src="@drawable/ie_casita"
-        android:tint="#FFFFFF"
+        android:contentDescription="Home"
+        app:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/barra"
@@ -121,17 +121,18 @@
         app:layout_constraintHorizontal_bias="0.05" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:backgroundTint="#124958"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#123946"
         android:rotation="90"
         android:src="@drawable/ie_puntitos"
+        android:contentDescription="Settings"
         app:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/barra"
         app:layout_constraintBottom_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.95" />
+        app:layout_constraintHorizontal_bias="0.97"  />
 
 
     <TextView

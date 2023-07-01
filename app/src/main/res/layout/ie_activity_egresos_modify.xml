@@ -107,8 +107,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
-        app:layout_constraintVertical_bias="1.5"
-        app:layout_marginTop="4dp" />
+        app:layout_constraintVertical_bias="1.5" />
 
     <TextView
         android:id="@+id/textView6"
@@ -127,30 +126,42 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
         android:src="@drawable/ie_trash"
-        android:tint="#FFFEFE"
-        tools:layout_editor_absoluteX="370dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:contentDescription="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:tint="#FFFEFE" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
         android:src="@drawable/ie_pencil"
-        android:tint="#FFFEFE"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:contentDescription="Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:tint="#FFFEFE" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="#059561"
-        android:tint="#FFFFFF"
+        android:contentDescription="Cancel"
+        app:tint="#FFFFFF"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05" />
 </androidx.constraintlayout.widget.ConstraintLayout>
