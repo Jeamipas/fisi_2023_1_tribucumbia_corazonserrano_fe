@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Configuracion.MainActivity3">
+    tools:context="Configuracion.Confiprincipal">
 
 
     <LinearLayout
@@ -22,9 +22,11 @@
             android:padding="4dp">
 
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/close"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:backgroundTint="#123946"
                 android:contentDescription="Configuraciones"
                 android:src="@drawable/icons8_close_20" />
 
@@ -151,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:paddingStart="16dp" />
+
         </LinearLayout>
 
         <TextView
@@ -164,12 +167,13 @@
             android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/btninfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#126A74"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="7dp">
 
             <ImageView
                 android:layout_width="24dp"
@@ -177,10 +181,12 @@
                 android:contentDescription="Información"
                 android:src="@drawable/icons8_high_importance_20" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btninfor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="16dp"
+                android:backgroundTint="#126A74"
+                android:paddingStart="10dp"
                 android:text="INFORMACIÓN"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
@@ -192,7 +198,7 @@
             android:background="#126A74"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="7dp">
 
             <ImageView
                 android:layout_width="24dp"
@@ -200,9 +206,11 @@
                 android:contentDescription="Ayuda"
                 android:src="@drawable/icons8_help_20" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnhelp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#126A74"
                 android:paddingStart="16dp"
                 android:text="AYUDA"
                 android:textColor="#FFFFFF"
@@ -211,29 +219,20 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="24dp" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cerrars"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/boton_redondeado"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_gravity="center"
+            android:backgroundTint="#9FEEE4"
+            android:paddingStart="15dp"
+            android:text="CERRAR SESIÓN"
+            android:textColor="#123946"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingStart="130dp"
-                android:text="CERRAR SESIÓN"
-                android:textColor="#123946"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
