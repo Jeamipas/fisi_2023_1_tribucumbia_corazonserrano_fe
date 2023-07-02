@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Design.Light.NoActionBar">
+        <item name="colorPrimary">@color/ProgressBarTrack</item>
+        <item name="colorPrimaryDark">@color/ToolbarColor</item>
+        <item name="colorAccent">@color/Inversiones</item>
+    </style>
+    
+    <style name="AppTheme.TemaPopUp">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+</resources>
