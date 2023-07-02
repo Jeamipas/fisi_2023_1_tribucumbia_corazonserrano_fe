@@ -63,6 +63,7 @@
         android:background="@drawable/ie_text_redondeado"
         android:hint="    Fecha"
         android:textColor="#80000000"
+        android:focusable="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/monto"
         app:layout_constraintHorizontal_bias="0.0"
