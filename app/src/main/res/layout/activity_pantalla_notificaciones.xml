@@ -37,11 +37,12 @@
             android:padding="20dp">
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/ImageView13"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:tint="#FFFFFF"
-                app:srcCompat="@drawable/ic_notifications" />
+                android:src="@drawable/ic_notifications"
+                app:tint="#FFFFFF" />
+
 
             <TextView
                 android:id="@+id/textView7"
@@ -52,7 +53,186 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
+
+        <!-- Aquí se agregarían los LinearLayouts para cada notificación -->
+
+        <LinearLayout
+            android:id="@+id/notification1Layout"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/notification1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notification1Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Hoy"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/notification1Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Aguanteee! 😥"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/notification2Layout"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/notification2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notification2Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Ayer"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification3Layout"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/notification3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notification3Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Hace dos días"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification4Layout"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/notification4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notification4Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Miércoles, 25 de mayo"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification5Layout"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/notification5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notification5Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Lunes, 23 de mayo"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <!-- ... y así sucesivamente para cada notificación -->
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

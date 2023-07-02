@@ -1,17 +1,26 @@
 package Notificacion
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import android.widget.TextView
 import com.example.ingresogastos.R
+import java.text.SimpleDateFormat
+import java.util.*
 
 class pantallaNotificaciones : AppCompatActivity() {
 
     private val CHANNEL_ID = "MiCanalDeNotificaciones"
+    private val NOTIFICATION_ID = 0
+    private val PERMISSION_REQUEST_CODE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +29,45 @@ class pantallaNotificaciones : AppCompatActivity() {
         // Crear canal de notificación (solo necesario para Android Oreo y versiones superiores)
         createNotificationChannel()
 
-        // Lógica para comprobar si se ha superado el límite de gastos
-        val limiteGastos = 1000 // Definir el límite de gastos permitido
-        val gastosActuales = 1200 // Obtener los gastos actuales del usuario
+        // Obtener la fecha actual
+        val currentDate = getCurrentDate()
 
-        if (gastosActuales > limiteGastos) {
-            // Mostrar notificación de que se ha superado el límite de gastos
-            showNotification()
+        // Definir los mensajes de notificación basados en la fecha actual
+        val notificationMessage = when (currentDate) {
+            getCurrentDate() -> "¡Felicitaciones! 🚀 Usted ha ahorrado S/. 450. En su periodo propuesto de 1 mes!"
+            getPreviousDate(1) -> "¡Aguanteee! 😥 Le queda menos de la mitad del presupuesto asignado."
+            getPreviousDate(2) -> "Atento 🫡 El tiempo de presupuesto asignado expira en dos días"
+            getPreviousDate(5) -> "¡Alerta, no ahorro nada! 😡 El tiempo asignado al presupuesto ha expirado, lastimosamente no pudo generar ningún ahorro."
+            getPreviousDate(7) -> "Ojito 👀 Le quedan solo S/.500 de su presupuesto asignado."
+            else -> ""
         }
+
+        // Mostrar la notificación si el mensaje no está vacío
+        if (notificationMessage.isNotEmpty()) {
+            // Verificar si se tienen los permisos necesarios
+            if (hasNotificationPermission()) {
+                // Se tienen los permisos, mostrar la notificación
+                showNotification(notificationMessage)
+            } else {
+                // No se tienen los permisos, solicitarlos al usuario
+                requestNotificationPermission()
+            }
+        }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("EEEE, dd MMMM", Locale.getDefault())
+        val currentDate = Date()
+        return dateFormat.format(currentDate)
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getPreviousDate(days: Int): String {
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_YEAR, -days)
+        val dateFormat = SimpleDateFormat("EEEE, dd MMMM", Locale.getDefault())
+        return dateFormat.format(calendar.time)
     }
 
     private fun createNotificationChannel() {
@@ -47,16 +87,36 @@ class pantallaNotificaciones : AppCompatActivity() {
         }
     }
 
-    private fun showNotification() {
-        /*val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notification)
+    private fun showNotification(message: String) {
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_notifications)
             .setContentTitle("Límite de gastos superado")
-            .setContentText("Has superado tu límite de gastos permitido")
+            .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
-        with(NotificationManagerCompat.from(this)) {
-            // Notificar al usuario
-            notify(0, builder.build())
-        }*/
+        try {
+            with(NotificationManagerCompat.from(this)) {
+                // Notificar al usuario
+                notify(NOTIFICATION_ID, builder.build())
+            }
+        } catch (e: SecurityException) {
+            // Manejar la excepción en caso de que se produzca un error de permiso
+            e.printStackTrace()
+        }
+    }
+
+    private fun hasNotificationPermission(): Boolean {
+        return ActivityCompat.checkSelfPermission(
+            this,
+            android.Manifest.permission.POST_NOTIFICATIONS
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun requestNotificationPermission() {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+            PERMISSION_REQUEST_CODE
+        )
     }
 }
