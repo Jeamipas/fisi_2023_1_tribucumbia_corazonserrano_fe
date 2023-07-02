@@ -88,16 +88,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="14dp"
         android:backgroundTint="#123946"
         android:fontFamily="@font/montserrat"
         android:text="REGISTRAR"
-        app:cornerRadius="8dp"
+        android:textColor="#FFFFFF"
 
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmarpass"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmarpass" />
 
     <TextView
         android:id="@+id/textView"
@@ -142,11 +141,11 @@
         android:layout_width="31dp"
         android:layout_height="31dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="7dp"
         app:layout_constraintEnd_toStartOf="@+id/nombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bttn_regresar"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/list" />
 
     <ImageView
@@ -190,30 +189,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/list" />
-
-    <Button
-        android:id="@+id/bttn_regresar"
-        style="@style/Widget.Material3.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Regresar"
-        android:textColor="#123946"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="24dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/bttn_regresar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconvolver" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
