@@ -13,8 +13,9 @@
         android:theme="@style/Theme.IngresoGastos"
         tools:targetApi="31">
         <activity
-            android:name="RegistrarIE.IngresosPopWindowActivity"
-            android:exported="true">
+            android:name="RegistrarIE.Egresos2Activity"
+            android:exported="true"
+            android:theme="@style/AppTheme.TemaPopUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,35 +41,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="RegistrarIE.IngresosPopWindowActivity"
+            android:theme="@style/AppTheme.TemaPopUp"></activity>
+        <activity
             android:name="RegistrarIE.EgresosEliminarPopWindowActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.TemaPopUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.TemaPopUp"></activity>
         <activity
             android:name="RegistrarIE.IngresosEliminarPopWindowActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.TemaPopUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.TemaPopUp"></activity>
         <activity
             android:name="RegistrarIE.CategoriaPopWindowActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.TemaPopUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.TemaPopUp"></activity>
         <activity
             android:name="RegistrarIE.EgresosActivity"
             android:exported="false" />
@@ -77,7 +63,6 @@
             android:exported="false" />
         <activity
             android:name="RegistrarIE.EgresosPopWindowActivity"
-            android:exported="false"
             android:theme="@style/AppTheme.TemaPopUp" />
         <activity
             android:name="RegistrarIE.IngresosModifyActivity"
