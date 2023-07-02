@@ -33,12 +33,12 @@ class IngresosActivity : AppCompatActivity() {
         }
 
         btnGastos.setOnClickListener {
-            val intent = Intent(this, CategoriaPopWindowActivity::class.java)
+            val intent = Intent(this, EgresosActivity::class.java)
             startActivity(intent)
         }
 
         btnACategoria.setOnClickListener {
-            val intent = Intent(this, IngresosEliminarPopWindowActivity::class.java)
+            val intent = Intent(this, CategoriaPopWindowActivity::class.java)
             startActivity(intent)
         }
 
@@ -87,7 +87,7 @@ class IngresosActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnEditar.setOnClickListener {
+        btnEliminar.setOnClickListener {
             val intent = Intent(this, IngresosEliminarPopWindowActivity::class.java)
             startActivity(intent)
         }
