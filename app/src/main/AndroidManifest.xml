@@ -13,15 +13,6 @@
         android:theme="@style/Theme.IngresoGastos"
         tools:targetApi="31">
         <activity
-            android:name="PantallaRecomendaciones.zzzz"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="RegistrarIE.IngresosPopWindowActivity"
             android:exported="true">
             <intent-filter>
