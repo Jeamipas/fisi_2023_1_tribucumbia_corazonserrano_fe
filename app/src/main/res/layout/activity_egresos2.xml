@@ -2,153 +2,103 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:padding="20dp"
     android:background="#EFFFF4"
-    tools:context="RegistrarIE.Egresos2Activity">
+    tools:context="RegistrarIE.EgresosPopWindowActivity">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="390dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="488dp"
-        android:backgroundTint="#159897"
-        android:fontFamily="@font/roboto"
-        android:text="+ AÑADIR CATEGORIA"
-        android:textAlignment="textStart"
-        android:textColor="#1F1F25"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
-        app:layout_constraintVertical_bias="1.5" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonIngresos"
-        android:layout_width="170dp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ie_boton_ingresos_trans_redondeado"
         android:fontFamily="@font/inter"
-        android:text="INGRESOS"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonGastos"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ie_boton_gastos_redondeado"
-        android:fontFamily="@font/inter"
-        android:text="GASTOS"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Texto"
-        android:textColor="#80000000"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Texto"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barra"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Texto"
-        android:textColor="#80000000"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGastos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.9" />
-
-    <View
-        android:id="@+id/barra"
-        android:layout_width="0dp"
-        android:layout_height="67dp"
-        android:background="#123946"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#123946"
-        android:src="@drawable/ie_casita"
-        android:contentDescription="Home"
-        app:tint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/barra"
-        app:layout_constraintBottom_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.05" />
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#123946"
-        android:rotation="90"
-        android:src="@drawable/ie_puntitos"
-        android:contentDescription="Settings"
-        app:tint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/barra"
-        app:layout_constraintBottom_toBottomOf="@+id/barra"
-        app:layout_constraintHorizontal_bias="0.97"  />
-
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/ie_textview_redondeado"
-        android:elevation="6dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Total: S/."
-        android:textAlignment="center"
+        android:text="Ingreso"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:fontFamily="@font/roboto"
+        android:hint="   Nombre"
+        android:textColor="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <EditText
+        android:id="@+id/monto"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:fontFamily="@font/roboto"
+        android:hint="   Monto"
+        android:textColor="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ie_text_redondeado"
+        android:hint="    Fecha"
+        android:textColor="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/monto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/monto"
+        app:layout_constraintTop_toBottomOf="@+id/monto"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:background="#EFFFF4"
+        android:contentDescription="Fecha"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fecha"
+        app:layout_constraintTop_toBottomOf="@+id/monto"
+        app:layout_constraintVertical_bias="0.278"
+        app:tint="#000000" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ie_boton_gastospop_redondeado"
+        android:elevation="30dp"
+        android:fontFamily="@font/roboto"
+        android:text="Aceptar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
