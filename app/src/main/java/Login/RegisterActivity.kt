@@ -1,21 +1,24 @@
 package Login
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatButton
 import com.example.ingresogastos.R
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var bttnRegistrar: Button
+
     private lateinit var nombreEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var passEditText: EditText
     private lateinit var confirmarpassEditText: EditText
-    private lateinit var bttnIniciar: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,34 +28,101 @@ class RegisterActivity : AppCompatActivity() {
         emailEditText = findViewById(R.id.email)
         passEditText = findViewById(R.id.pass)
         confirmarpassEditText = findViewById(R.id.confirmarpass)
-        bttnIniciar = findViewById(R.id.bttniniciarsesion)
-        bttnRegistrar = findViewById(R.id.bttnregistrar)
+        val btnIniciar= findViewById<AppCompatButton>(R.id.bttniniciarsesion)
+        val btnRegistro = findViewById<AppCompatButton>(R.id.bttnregistrar)
 
-        bttnRegistrar.setOnClickListener {
+        btnRegistro.setOnClickListener {
             val nombre = nombreEditText.text.toString()
             val email = emailEditText.text.toString()
             val pass= passEditText.text.toString()
             val confirmarpass = confirmarpassEditText.text.toString()
 
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+
+            val nombreValido = validarNombre(nombre)
+            val emailValido = validarEmail(email)
+            val passValido = validarPass(pass)
+            val confirmarpassValido = validarConfirmarpassword(confirmarpass)
 
 
-            // Aquí puedes agregar la lógica para validar el inicio de sesión
-           /* if (nombre.isNotEmpty() && pass.isNotEmpty() && email.isNotEmpty() && confirmarpass.isNotEmpty()) {
-                // Iniciar registro exitoso
-                Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-            } else {
-                // Error de registro
-                Toast.makeText(this, "Error: Ingresa el nombre y la contraseña", Toast.LENGTH_SHORT).show()
-            }*/
+            if (nombreValido && emailValido && passValido && confirmarpassValido) {
+                // Iniciar sesión exitoso
+                mostrarVentanaEmergenteValido()
+                Toast.makeText(this, "Usted ha sido registrado exitosamente", Toast.LENGTH_SHORT).show()
+
+            }else {
+                // Error de inicio de sesión
+                mostrarVentanaEmergenteError()
+                Toast.makeText(this, "Error: Los datos ingresados son incorrectos", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        bttnIniciar.setOnClickListener {
+
+        btnIniciar.setOnClickListener {
             // Aquí puedes agregar la lógica para abrir la pantalla de registro
             // Toast.makeText(this, "Abrir pantalla de registro", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
+
+    private fun validarNombre(nombre: String): Boolean {
+        // Realiza la validación del nombre aquí y devuelve true si es válido, de lo contrario false
+        // Puedes implementar tu lógica de validación según tus requerimientos
+        // Por ejemplo, verificar si no está vacío o si cumple ciertas condiciones
+        return !nombre.isEmpty()
+    }
+
+    private fun validarEmail(nombre: String): Boolean {
+        // Realiza la validación del nombre aquí y devuelve true si es válido, de lo contrario false
+        // Puedes implementar tu lógica de validación según tus requerimientos
+        // Por ejemplo, verificar si no está vacío o si cumple ciertas condiciones
+        return !nombre.isEmpty()
+    }
+
+    private fun validarPass(password: String): Boolean {
+        // Realiza la validación de la contraseña aquí y devuelve true si es válida, de lo contrario false
+        // Puedes implementar tu lógica de validación según tus requerimientos
+        // Por ejemplo, verificar si no está vacía o si cumple ciertas condiciones
+        return password.length >= 6
+    }
+
+    private fun validarConfirmarpassword(password: String): Boolean {
+        // Realiza la validación de la contraseña aquí y devuelve true si es válida, de lo contrario false
+        // Puedes implementar tu lógica de validación según tus requerimientos
+        // Por ejemplo, verificar si no está vacía o si cumple ciertas condiciones
+        return password.length >= 6
+    }
+
+    private fun mostrarVentanaEmergenteValido() {
+        // Crea un AlertDialog para mostrar la ventana emergente
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Registro validado")
+        alertDialogBuilder.setMessage("Usted ha sido registrado exitosamente")
+        val intent = Intent(this, LoginActivity::class.java)
+        // Agrega un botón "Aceptar" en la ventana emergente
+        alertDialogBuilder.setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, which ->
+            // Acciones a realizar cuando se hace clic en el botón "Aceptar"
+            startActivity(intent) // Cierra la ventana emergente
+        })
+        // Muestra la ventana emergente
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
+    private fun mostrarVentanaEmergenteError() {
+        // Crea un AlertDialog para mostrar la ventana emergente
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Error en Registro")
+        alertDialogBuilder.setMessage("Error: Los datos ingresados son incorrectos. Vuelva a ingresar sus datos")
+
+        // Agrega un botón "Aceptar" en la ventana emergente
+        alertDialogBuilder.setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, which ->
+            // Acciones a realizar cuando se hace clic en el botón "Aceptar"
+            dialog.dismiss() // Cierra la ventana emergente
+        })
+        // Muestra la ventana emergente
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
 }

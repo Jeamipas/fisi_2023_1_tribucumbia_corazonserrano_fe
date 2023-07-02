@@ -13,8 +13,9 @@
         android:layout_height="48dp"
         android:background="@drawable/ie_text_redondeado"
         android:fontFamily="@font/montserrat"
-        android:text="Nombre"
+        android:hint="Nombre"
         android:textColor="#80000000"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +28,10 @@
         android:layout_height="48dp"
         android:background="@drawable/ie_text_redondeado"
         android:fontFamily="@font/montserrat"
-        android:text="Presupuesto"
+        android:ems="10"
+        android:hint="Presupuesto"
         android:textColor="#80000000"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +39,7 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton2"
+        android:id="@+id/buttonAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ie_boton_gastospop_redondeado"
