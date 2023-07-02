@@ -9,12 +9,16 @@ import java.text.SimpleDateFormat
 import java.util.*
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.charts.LineChart
+import android.graphics.Color
 
-class pantallaRecomendacionesBot : AppCompatActivity() {
+class zzzz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_recomendaciones_bot)
-
+        llenarSaldoActual()
+        llenarTextProgreso()
+        llenarRecomendacion()
+        llenarGraficoProgreso()
 
     }
 
@@ -66,7 +70,7 @@ class pantallaRecomendacionesBot : AppCompatActivity() {
         xvalue.add(fecha)
         val lineentry = ArrayList<Entry>();
         for (i in 1..diasMes){
-            lineentry.add(Entry(20f,i*1f))
+            lineentry.add(Entry(i*1f,20f))
         }
 
         val linedataset = LineDataSet(lineentry,"First")
@@ -75,8 +79,9 @@ class pantallaRecomendacionesBot : AppCompatActivity() {
         val data = LineData(linedataset)
 
         lineChartIncomes.data = data
-        lineChartIncomes.setBackgroundColor(resources.getColor(R.color.white))
+        lineChartIncomes.setBackgroundColor(Color.parseColor("#BEFBF4"))
         lineChartIncomes.animateXY(1000,1000)
+        lineChartIncomes.invalidate()
 
 
     }
@@ -87,6 +92,4 @@ class pantallaRecomendacionesBot : AppCompatActivity() {
         calendar.set(anioActual, mesActual, 1) // Establecer el primer día del mes actual
         return calendar.getActualMaximum(Calendar.DAY_OF_MONTH)
     }
-
-
 }
