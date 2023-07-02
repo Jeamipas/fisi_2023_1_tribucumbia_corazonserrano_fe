@@ -1,9 +1,11 @@
 package RegistrarIE
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageButton
 import com.example.ingresogastos.R
 import java.text.SimpleDateFormat
@@ -17,6 +19,7 @@ class IngresosPopWindowActivity : AppCompatActivity() {
 
         val btnFecha = findViewById<AppCompatImageButton>(R.id.btnFecha)
         val fecha = findViewById<EditText>(R.id.fecha)
+        val btnAceptar = findViewById<AppCompatButton>(R.id.btnAceptar)
 
         var btnFechaSelected = false
         var fechaSelected = false
@@ -50,6 +53,11 @@ class IngresosPopWindowActivity : AppCompatActivity() {
         fecha.setOnClickListener {
             fechaSelected = true
             checkSelection()
+        }
+
+        btnAceptar.setOnClickListener {
+            val intent = Intent(this, IngresosActivity::class.java)
+            startActivity(intent)
         }
     }
 }

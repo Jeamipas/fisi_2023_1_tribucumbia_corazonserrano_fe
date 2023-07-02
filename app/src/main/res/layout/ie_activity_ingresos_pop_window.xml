@@ -86,7 +86,7 @@
         app:tint="#000000" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/btnAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ie_boton_gastospop_redondeado"
