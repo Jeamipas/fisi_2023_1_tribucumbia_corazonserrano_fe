@@ -12,12 +12,5 @@ class EgresosEliminarPopWindowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ie_activity_egresos_eliminar_pop_window)
 
-        val botonCancelar = findViewById<AppCompatImageButton>(R.id.botonCancelar)
-        val botonAceptar = findViewById<AppCompatImageButton>(R.id.botonAceptar)
-
-        botonCancelar.setOnClickListener {
-            val intent = Intent(this, EgresosActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

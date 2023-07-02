@@ -1,5 +1,6 @@
 package RegistrarIE
 
+import Configuracion.Confiprincipal
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +41,11 @@ class EgresosActivity : AppCompatActivity() {
 
         btnACategoria.setOnClickListener {
             val intent = Intent(this, CategoriaPopWindowActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, Confiprincipal::class.java)
             startActivity(intent)
         }
 

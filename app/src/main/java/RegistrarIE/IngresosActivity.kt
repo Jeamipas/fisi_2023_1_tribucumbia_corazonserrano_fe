@@ -1,5 +1,6 @@
 package RegistrarIE
 
+import Configuracion.Confiprincipal
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -80,6 +81,11 @@ class IngresosActivity : AppCompatActivity() {
             btnCancelar.visibility = View.GONE
             btnEditar.visibility = View.GONE
             btnEliminar.visibility = View.GONE
+        }
+
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, Confiprincipal::class.java)
+            startActivity(intent)
         }
 
         btnEditar.setOnClickListener {

@@ -1,5 +1,6 @@
 package RegistrarIE
 
+import Configuracion.Confiprincipal
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,11 @@ class Egresos2Activity : AppCompatActivity() {
 
         btnHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, Confiprincipal::class.java)
             startActivity(intent)
         }
 
