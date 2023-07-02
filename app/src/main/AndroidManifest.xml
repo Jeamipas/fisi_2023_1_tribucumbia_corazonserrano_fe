@@ -71,20 +71,45 @@
         </activity>
         <activity
             android:name="RegistrarIE.EgresosActivity"
-            android:exported="false" />
+            android:exported="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <activity
             android:name="RegistrarIE.EgresosModifyActivity"
-            android:exported="false" />
+            android:exported="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <activity
             android:name="RegistrarIE.EgresosPopWindowActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/AppTheme.TemaPopUp" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <activity
             android:name="RegistrarIE.IngresosModifyActivity"
-            android:exported="false" />
+            android:exported="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <activity
             android:name="RegistrarIE.IngresosActivity"
-            android:exported="false" />
+            android:exported="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <activity
             android:name=".MainActivity"
             android:exported="true">
