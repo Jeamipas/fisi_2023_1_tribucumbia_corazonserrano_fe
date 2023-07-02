@@ -48,7 +48,7 @@ class pantallaNotificaciones : AppCompatActivity() {
     }
 
     private fun showNotification() {
-        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+        /*val builder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("Límite de gastos superado")
             .setContentText("Has superado tu límite de gastos permitido")
@@ -57,6 +57,6 @@ class pantallaNotificaciones : AppCompatActivity() {
         with(NotificationManagerCompat.from(this)) {
             // Notificar al usuario
             notify(0, builder.build())
-        }
+        }*/
     }
 }
