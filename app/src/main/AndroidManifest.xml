@@ -24,8 +24,7 @@
 
         <activity
             android:name="RegistrarIE.Egresos2Activity"
-            android:exported="true"
-            android:theme="@style/AppTheme.TemaPopUp">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

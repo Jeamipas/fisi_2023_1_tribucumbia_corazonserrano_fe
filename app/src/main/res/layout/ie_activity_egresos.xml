@@ -7,24 +7,23 @@
     android:background="#EFFFF4"
     tools:context="RegistrarIE.EgresosActivity">
 
-    <Button
-        android:id="@+id/button4"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnACategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
+        app:layout_constraintVertical_bias="0.05"
         android:layout_width="390dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="488dp"
         android:backgroundTint="#159897"
+        android:background="@drawable/ie_boton_gastos_redondeado"
         android:fontFamily="@font/roboto"
-        android:text="+ AÑADIR CATEGORIA"
+        android:text="  + AÑADIR CATEGORIA"
         android:textAlignment="textStart"
         android:textColor="#1F1F25"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGastos"
-        app:layout_constraintVertical_bias="1.5" />
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonIngresos"
@@ -108,6 +107,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/btnHome"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#123946"
@@ -121,6 +121,7 @@
         app:layout_constraintHorizontal_bias="0.05" />
 
     <ImageButton
+        android:id="@+id/btnSettings"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#123946"
