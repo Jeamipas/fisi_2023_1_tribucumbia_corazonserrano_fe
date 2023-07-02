@@ -152,4 +152,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnEliminar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#059561"
+        android:src="@drawable/ie_trash"
+        android:contentDescription="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:tint="#FFFEFE"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnEditar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#059561"
+        android:src="@drawable/ie_pencil"
+        android:contentDescription="Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:tint="#FFFEFE"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnCancelar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#059561"
+        android:contentDescription="Cancel"
+        app:tint="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/barra"
+        app:layout_constraintTop_toTopOf="@+id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:visibility="gone"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

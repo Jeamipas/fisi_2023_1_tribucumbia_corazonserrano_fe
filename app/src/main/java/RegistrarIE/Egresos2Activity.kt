@@ -10,13 +10,15 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageButton
+import com.example.ingresogastos.MainActivity
 import com.example.ingresogastos.R
 
 class Egresos2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ie_activity_ingresos)
-        val btnGastos = findViewById<AppCompatButton>(R.id.btnGastos)
+        setContentView(R.layout.activity_egresos2)
+        val btnACategoria = findViewById<AppCompatButton>(R.id.btnACategoria)
+        val btnIngresos = findViewById<AppCompatButton>(R.id.buttonIngresos)
         val barra = findViewById<View>(R.id.barra)
         val btnHome = findViewById<AppCompatImageButton>(R.id.btnHome)
         val btnSettings = findViewById<AppCompatImageButton>(R.id.btnSettings)
@@ -24,9 +26,38 @@ class Egresos2Activity : AppCompatActivity() {
         val btnEditar = findViewById<AppCompatImageButton>(R.id.btnEditar)
         val btnEliminar = findViewById<AppCompatImageButton>(R.id.btnEliminar)
 
-        btnGastos.setOnClickListener {
-            val intent = Intent(this, EgresosActivity::class.java)
+        btnHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        btnIngresos.setOnClickListener {
+            val intent = Intent(this, IngresosActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnACategoria.setOnClickListener {
+            val intent = Intent(this, CategoriaPopWindowActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnEditar.setOnClickListener{
+            val intent = Intent(this, EgresosPopWindowActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnEliminar.setOnClickListener{
+            val intent = Intent(this, EgresosEliminarPopWindowActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnCancelar.setOnClickListener {
+            barra.setBackgroundColor(Color.parseColor("#123946"))
+            btnHome.visibility = View.VISIBLE
+            btnSettings.visibility = View.VISIBLE
+            btnCancelar.visibility = View.GONE
+            btnEditar.visibility = View.GONE
+            btnEliminar.visibility = View.GONE
         }
 
         barra.setOnTouchListener(object : View.OnTouchListener {
