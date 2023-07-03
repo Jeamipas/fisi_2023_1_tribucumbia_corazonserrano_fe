@@ -1,8 +1,10 @@
 package PantallaRecomendaciones
 
+import android.content.Intent
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.ingresogastos.MainActivity
 import com.example.ingresogastos.R
 import com.github.mikephil.charting.charts.PieChart
 import java.text.SimpleDateFormat
@@ -11,12 +13,21 @@ import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.charts.LineChart
 
 class pantallaRecomendacionesBot : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_recomendaciones_bot)
 
 
+        val botonRegresar = findViewById<Button>(R.id.button)
+        botonRegresar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
 
     private fun llenarSaldoActual(){
         val saldo = 4

@@ -81,24 +81,24 @@
             app:layout_constraintTop_toBottomOf="@+id/progressBar"
             app:layout_constraintVertical_bias="0.184" />
 
-        <View
-            android:id="@+id/view4"
-            android:layout_width="359dp"
-            android:layout_height="155dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="301dp"
-            android:background="@drawable/rjp_contenedor_redondeado"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+    <View
+        android:id="@+id/view4"
+        android:layout_width="352dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="301dp"
+        android:background="@drawable/rjp_contenedor_redondeado"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <View
         android:id="@+id/view3"
-        android:layout_width="380dp"
-        android:layout_height="167dp"
+        android:layout_width="373dp"
+        android:layout_height="168dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="330dp"
         android:layout_marginEnd="17dp"
@@ -183,21 +183,21 @@
             app:layout_constraintTop_toBottomOf="@+id/view4"
             app:srcCompat="@drawable/rjp_img_2" />
 
-        <TextView
-            android:id="@+id/textViewRecomendacion"
-            android:layout_width="355dp"
-            android:layout_height="142dp"
-            android:gravity="top|start"
-            android:maxLines="3"
-            android:text="Sin recomendacion."
-            android:textAlignment="viewStart"
-            android:textAllCaps="false"
-            android:textColor="#126A74"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4" />
+    <TextView
+        android:id="@+id/textViewRecomendacion"
+        android:layout_width="341dp"
+        android:layout_height="134dp"
+        android:gravity="top|start"
+        android:maxLines="3"
+        android:text="Sin recomendacion."
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#126A74"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
         <ImageView
             android:id="@+id/imageView3"
