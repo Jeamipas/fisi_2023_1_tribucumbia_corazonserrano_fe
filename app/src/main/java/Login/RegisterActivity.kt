@@ -47,12 +47,12 @@ class RegisterActivity : AppCompatActivity() {
             if (nombreValido && emailValido && passValido && confirmarpassValido) {
                 // Iniciar sesión exitoso
                 mostrarVentanaEmergenteValido()
-                Toast.makeText(this, "Usted ha sido registrado exitosamente", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Usted ha sido registrado exitosamente", Toast.LENGTH_SHORT).show()
 
             }else {
                 // Error de inicio de sesión
                 mostrarVentanaEmergenteError()
-                Toast.makeText(this, "Error: Los datos ingresados son incorrectos", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Error: Los datos ingresados son incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -72,25 +72,25 @@ class RegisterActivity : AppCompatActivity() {
         return !nombre.isEmpty()
     }
 
-    private fun validarEmail(nombre: String): Boolean {
+    private fun validarEmail(email: String): Boolean {
         // Realiza la validación del nombre aquí y devuelve true si es válido, de lo contrario false
         // Puedes implementar tu lógica de validación según tus requerimientos
         // Por ejemplo, verificar si no está vacío o si cumple ciertas condiciones
-        return !nombre.isEmpty()
+        return !email.isEmpty()
     }
 
-    private fun validarPass(password: String): Boolean {
+    private fun validarPass(pass: String): Boolean {
         // Realiza la validación de la contraseña aquí y devuelve true si es válida, de lo contrario false
         // Puedes implementar tu lógica de validación según tus requerimientos
         // Por ejemplo, verificar si no está vacía o si cumple ciertas condiciones
-        return password.length >= 6
+        return pass.length >= 6
     }
 
-    private fun validarConfirmarpassword(password: String): Boolean {
+    private fun validarConfirmarpassword(confirmarpass: String): Boolean {
         // Realiza la validación de la contraseña aquí y devuelve true si es válida, de lo contrario false
         // Puedes implementar tu lógica de validación según tus requerimientos
         // Por ejemplo, verificar si no está vacía o si cumple ciertas condiciones
-        return password.length >= 6
+        return confirmarpass.length >= 6
     }
 
     private fun mostrarVentanaEmergenteValido() {

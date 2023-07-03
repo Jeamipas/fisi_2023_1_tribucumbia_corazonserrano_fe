@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
 import com.example.ingresogastos.R
+import com.example.ingresogastos.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -41,6 +42,8 @@ class LoginActivity : AppCompatActivity() {
             if (nombreValido && passwordValido) {
                 // Iniciar sesión exitoso
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
 
             }else {
                 // Error de inicio de sesión
