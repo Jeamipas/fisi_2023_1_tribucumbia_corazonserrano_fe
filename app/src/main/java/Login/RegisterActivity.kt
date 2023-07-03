@@ -4,9 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
 import com.example.ingresogastos.R
@@ -18,16 +16,19 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
     private lateinit var passEditText: EditText
     private lateinit var confirmarpassEditText: EditText
+    private lateinit var nombreUserEditText: EditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        nombreEditText = findViewById(R.id.nombre)
+        nombreEditText = findViewById(R.id.id)
         emailEditText = findViewById(R.id.email)
         passEditText = findViewById(R.id.pass)
         confirmarpassEditText = findViewById(R.id.confirmarpass)
+        nombreUserEditText = findViewById(R.id.nombreUser)
+
         val btnIniciar= findViewById<AppCompatButton>(R.id.bttniniciarsesion)
         val btnRegistro = findViewById<AppCompatButton>(R.id.bttnregistrar)
 
@@ -36,15 +37,17 @@ class RegisterActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val pass= passEditText.text.toString()
             val confirmarpass = confirmarpassEditText.text.toString()
+            val nombreUser = nombreUserEditText.text.toString()
 
 
             val nombreValido = validarNombre(nombre)
             val emailValido = validarEmail(email)
             val passValido = validarPass(pass)
             val confirmarpassValido = validarConfirmarpassword(confirmarpass)
+            val nombreUserValido = validarNombreUser(nombreUser)
 
 
-            if (nombreValido && emailValido && passValido && confirmarpassValido) {
+            if (nombreValido && emailValido && passValido && confirmarpassValido && nombreUserValido) {
                 // Iniciar sesión exitoso
                 mostrarVentanaEmergenteValido()
                 //Toast.makeText(this, "Usted ha sido registrado exitosamente", Toast.LENGTH_SHORT).show()
@@ -91,6 +94,13 @@ class RegisterActivity : AppCompatActivity() {
         // Puedes implementar tu lógica de validación según tus requerimientos
         // Por ejemplo, verificar si no está vacía o si cumple ciertas condiciones
         return confirmarpass.length >= 6
+    }
+
+    private fun validarNombreUser(nombre: String): Boolean {
+        // Realiza la validación del nombre aquí y devuelve true si es válido, de lo contrario false
+        // Puedes implementar tu lógica de validación según tus requerimientos
+        // Por ejemplo, verificar si no está vacío o si cumple ciertas condiciones
+        return !nombre.isEmpty()
     }
 
     private fun mostrarVentanaEmergenteValido() {

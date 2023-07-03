@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/id"
         android:layout_width="310dp"
         android:layout_height="48dp"
         android:layout_marginStart="9dp"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/id"
          />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -112,7 +112,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintBottom_toTopOf="@+id/id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toStartOf="@+id/nombre"
+        app:layout_constraintEnd_toStartOf="@+id/id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/list" />

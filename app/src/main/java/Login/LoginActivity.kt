@@ -1,11 +1,9 @@
 package Login
 
-import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -25,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
 
         val btnIngresar = findViewById<AppCompatButton>(R.id.bttn_ingresar)
         val btnRegistrar = findViewById<AppCompatButton>(R.id.bttn_registrar)
-        nombreEditText = findViewById(R.id.nombre)
+        nombreEditText = findViewById(R.id.id)
         passwordEditText = findViewById(R.id.password)
 
 
