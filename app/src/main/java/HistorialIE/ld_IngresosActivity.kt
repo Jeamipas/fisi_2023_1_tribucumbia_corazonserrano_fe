@@ -1,5 +1,6 @@
 package HistorialIE
 
+import android.app.DatePickerDialog
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TableLayout
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageButton
 import com.example.ingresogastos.R
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
@@ -45,6 +47,49 @@ class ld_IngresosActivity : AppCompatActivity() {
         }
 
         llenarGraficoIngre()
+        val btnFecha = findViewById<AppCompatImageButton>(R.id.IngresosDesplegableDate)
+        //val fecha = findViewById<EditText>(R.id.fecha)
+
+        var btnFechaSelected = false
+
+        fun checkSelection() {
+            if (btnFechaSelected) {
+                // Obtener la fecha actual para establecerla como fecha predeterminada en el DatePicker
+                val currentDate = Calendar.getInstance()
+                val year = currentDate.get(Calendar.YEAR)
+                val month = currentDate.get(Calendar.MONTH)
+                val day = currentDate.get(Calendar.DAY_OF_MONTH)
+
+                // Crear un DatePickerDialog para permitir al usuario seleccionar una fecha
+                val datePickerDialog = DatePickerDialog(
+                    this,
+                    DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDay ->
+                        val selectedDate = Calendar.getInstance()
+                        selectedDate.set(selectedYear, selectedMonth, selectedDay)
+
+                        val formattedDate = SimpleDateFormat(
+                            "dd/MM/yyyy",
+                            Locale.getDefault()
+                        ).format(selectedDate.time)
+                    },
+                    year,
+                    month,
+                    day
+                )
+                //fecha.setText(formattedDate)
+                datePickerDialog.show()
+            }
+        }
+
+        btnFecha.setOnClickListener {
+            btnFechaSelected = true
+            checkSelection()
+        }
+
+        /*fecha.setOnClickListener {
+            fechaSelected = true
+            checkSelection()
+        }*/
     }
 
     private fun llenarGraficoIngre(){
