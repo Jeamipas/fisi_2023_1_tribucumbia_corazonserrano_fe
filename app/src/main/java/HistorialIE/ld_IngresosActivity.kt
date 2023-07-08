@@ -1,6 +1,7 @@
 package HistorialIE
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.View
 import android.widget.TableLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageButton
+import com.example.ingresogastos.MainActivity
 import com.example.ingresogastos.R
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
@@ -47,6 +49,15 @@ class ld_IngresosActivity : AppCompatActivity() {
         }
 
         llenarGraficoIngre()
+
+        //BOTON ATRAS
+        val btnAtrasEgresos = findViewById<AppCompatImageButton>(R.id.iconoAtrasIngresos)
+        btnAtrasEgresos.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val btnFecha = findViewById<AppCompatImageButton>(R.id.IngresosDesplegableDate)
         //val fecha = findViewById<EditText>(R.id.fecha)
 
