@@ -45,17 +45,24 @@ class RegisterActivity : AppCompatActivity() {
             val passValido = validarPass(pass)
             val confirmarpassValido = validarConfirmarpassword(confirmarpass)
             val nombreUserValido = validarNombreUser(nombreUser)
+            val coincidirPassword = validarCoincidenciaPassword(pass,confirmarpass)
 
 
-            if (nombreValido && emailValido && passValido && confirmarpassValido && nombreUserValido) {
+            if (nombreValido && emailValido && passValido && confirmarpassValido && nombreUserValido && coincidirPassword) {
                 // Iniciar sesión exitoso
                 mostrarVentanaEmergenteValido()
                 //Toast.makeText(this, "Usted ha sido registrado exitosamente", Toast.LENGTH_SHORT).show()
 
             }else {
-                // Error de inicio de sesión
-                mostrarVentanaEmergenteError()
-                //Toast.makeText(this, "Error: Los datos ingresados son incorrectos", Toast.LENGTH_SHORT).show()
+                if(!coincidirPassword){
+                    mostrarVentanaEmergentePassword()
+                }
+                else{
+                    // Error de inicio de sesión
+                    mostrarVentanaEmergenteError()
+                    //Toast.makeText(this, "Error: Los datos ingresados son incorrectos", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
 
@@ -96,6 +103,11 @@ class RegisterActivity : AppCompatActivity() {
         return confirmarpass.length >= 6
     }
 
+    private fun validarCoincidenciaPassword(pass: String, confirmarpass: String): Boolean {
+        return pass == confirmarpass
+    }
+
+
     private fun validarNombreUser(nombre: String): Boolean {
         // Realiza la validación del nombre aquí y devuelve true si es válido, de lo contrario false
         // Puedes implementar tu lógica de validación según tus requerimientos
@@ -135,4 +147,19 @@ class RegisterActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
+    private fun mostrarVentanaEmergentePassword() {
+        // Crea un AlertDialog para mostrar la ventana emergente
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Error en Contraseña")
+        alertDialogBuilder.setMessage("Error: Los contraseñas ingresados no coinciden. Vuelva a ingresar sus datos")
+
+        // Agrega un botón "Aceptar" en la ventana emergente
+        alertDialogBuilder.setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, which ->
+            // Acciones a realizar cuando se hace clic en el botón "Aceptar"
+            dialog.dismiss() // Cierra la ventana emergente
+        })
+        // Muestra la ventana emergente
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
 }
