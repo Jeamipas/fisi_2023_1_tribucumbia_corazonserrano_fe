@@ -1,11 +1,17 @@
 package com.example.ingresogastos
 
+import Configuracion.Confiprincipal
+import Notificacion.pantallaNotificaciones
+import PantallaRecomendaciones.pantallaRecomendacionesBot
+import RegistrarIE.IngresosActivity
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
@@ -17,6 +23,28 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val configuracion = findViewById<Button>(R.id.button_options)
+        val agregar = findViewById<Button>(R.id.button_more)
+        val notificaciones = findViewById<Button>(R.id.button_notifications)
+        val recomendaciones = findViewById<TextView>(R.id.textViewRecomendacion)
+
+        configuracion.setOnClickListener {
+            val intent = Intent(this, Confiprincipal::class.java)
+            startActivity(intent)
+        }
+        agregar.setOnClickListener {
+            val intent = Intent(this, IngresosActivity::class.java)
+            startActivity(intent)
+        }
+        notificaciones.setOnClickListener {
+            val intent = Intent(this, pantallaNotificaciones::class.java)
+            startActivity(intent)
+        }
+        recomendaciones.setOnClickListener {
+            val intent = Intent(this, pantallaRecomendacionesBot::class.java)
+            startActivity(intent)
+        }
 
         val linearProgressIndicator: LinearProgressIndicator = findViewById(R.id.linearProgressIndicator)
         linearProgressIndicator.progress = 80

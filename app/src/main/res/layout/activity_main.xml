@@ -17,20 +17,6 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button_filter"
-                style="?attr/materialIconButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:padding="0dp"
-                app:icon="@drawable/ic_filter"
-                app:iconSize="30dp"
-                app:iconTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
                 android:id="@+id/button_options"
                 style="?attr/materialIconButtonFilledTonalStyle"
                 android:layout_width="wrap_content"
@@ -124,6 +110,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/textViewRecomendacion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="32sp"
