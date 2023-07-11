@@ -1,17 +1,21 @@
 package Notificacion
 
+import Configuracion.Confiprincipal
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import android.widget.TextView
+import com.example.ingresogastos.MainActivity
 import com.example.ingresogastos.R
 import java.text.SimpleDateFormat
 import java.util.*
@@ -25,6 +29,13 @@ class pantallaNotificaciones : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_notificaciones)
+
+        val cerrar=findViewById<View>(R.id.cerrar)
+        cerrar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Crear canal de notificación (solo necesario para Android Oreo y versiones superiores)
         createNotificationChannel()

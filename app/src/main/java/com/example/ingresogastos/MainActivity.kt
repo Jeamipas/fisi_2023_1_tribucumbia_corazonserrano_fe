@@ -1,14 +1,18 @@
 package com.example.ingresogastos
 
 import Configuracion.Confiprincipal
+import HistorialIE.ld_EgresosActivity
+import HistorialIE.ld_IngresosActivity
 import Notificacion.pantallaNotificaciones
 import PantallaRecomendaciones.pantallaRecomendacionesBot
+import RegistrarIE.EgresosActivity
 import RegistrarIE.IngresosActivity
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -17,6 +21,7 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.progressindicator.LinearProgressIndicator
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         val agregar = findViewById<Button>(R.id.button_more)
         val notificaciones = findViewById<Button>(R.id.button_notifications)
         val recomendaciones = findViewById<TextView>(R.id.textViewRecomendacion)
+        val ingresos = findViewById<View>(R.id.ingresos)
+        val egresos = findViewById<View>(R.id.egresos)
 
         configuracion.setOnClickListener {
             val intent = Intent(this, Confiprincipal::class.java)
@@ -43,6 +50,14 @@ class MainActivity : AppCompatActivity() {
         }
         recomendaciones.setOnClickListener {
             val intent = Intent(this, pantallaRecomendacionesBot::class.java)
+            startActivity(intent)
+        }
+        ingresos.setOnClickListener {
+            val intent = Intent(this, ld_IngresosActivity::class.java)
+            startActivity(intent)
+        }
+        egresos.setOnClickListener {
+            val intent = Intent(this, ld_EgresosActivity::class.java)
             startActivity(intent)
         }
 
