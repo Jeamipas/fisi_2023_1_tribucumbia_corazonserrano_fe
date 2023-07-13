@@ -29,6 +29,10 @@
         <activity android:name="Configuracion.Confiprincipal"
             android:exported="false"/>
         <activity
+            android:name="Notificacion.pantallaNotificaciones"
+            android:exported="false">
+        </activity>
+        <activity
             android:name="RegistrarIE.Egresos2Activity"
             android:exported="true">
             <intent-filter>
