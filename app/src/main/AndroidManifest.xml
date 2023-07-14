@@ -39,6 +39,10 @@
             android:exported="true">
         </activity>
         <activity
+            android:name="Notificacion.pantallaNotificaciones"
+            android:exported="true">
+        </activity>
+        <activity
             android:name="RegistrarIE.IngresosPopWindowActivity"
             android:theme="@style/AppTheme.TemaPopUp" />
         <activity
