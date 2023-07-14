@@ -5,7 +5,7 @@ import HistorialIE.ld_EgresosActivity
 import HistorialIE.ld_IngresosActivity
 import Notificacion.pantallaNotificaciones
 import PantallaRecomendaciones.pantallaRecomendacionesBot
-import RegistrarIE.EgresosActivity
+
 import RegistrarIE.IngresosActivity
 import android.content.Intent
 import android.graphics.Typeface
@@ -145,5 +145,29 @@ class MainActivity : AppCompatActivity() {
 
         // Establecer el SpannableStringBuilder en el TextView
         textView.text = spannableStringBuilder
+
+        val buttonPieChartIncomes: Button = findViewById(R.id.buttonPieChartIncomes)
+
+        pieChartIncomes.setOnClickListener {
+            buttonPieChartIncomes.performClick()
+        }
+
+        buttonPieChartIncomes.setOnClickListener {
+            val intent = Intent(this, ld_IngresosActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonPieChartExpen: Button = findViewById(R.id.buttonPieChartExpen)
+
+        pieChartExpenses.setOnClickListener {
+            buttonPieChartExpen.performClick()
+        }
+
+        buttonPieChartExpen.setOnClickListener {
+            val intent = Intent(this, ld_EgresosActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
 }

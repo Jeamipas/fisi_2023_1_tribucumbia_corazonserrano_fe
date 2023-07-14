@@ -15,7 +15,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageButton
 import com.example.ingresogastos.MainActivity
 import com.example.ingresogastos.R
-import com.example.ingresogastos.databinding.ActivityMainBinding
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
