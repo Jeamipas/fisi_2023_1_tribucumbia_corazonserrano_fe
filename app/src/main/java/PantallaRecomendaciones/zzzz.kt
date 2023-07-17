@@ -11,7 +11,9 @@ import java.util.*
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.charts.LineChart
 import android.graphics.Color
+import android.util.Log
 import com.example.ingresogastos.MainActivity
+import kotlin.concurrent.thread
 
 class zzzz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +27,6 @@ class zzzz : AppCompatActivity() {
         llenarSaldoActual()
         llenarTextProgreso()
         llenarRecomendacion()
-        llenarGraficoProgreso()
 
     }
 
@@ -43,13 +44,32 @@ class zzzz : AppCompatActivity() {
         textViewSaldo.text = "S/. $gasto de S/. $presupuesto gastados"
     }
 
+    private fun obtenerRecomendación(id:Int):String{
+        thread {
+            val recomendacion = RecomendacionPeticion.service.getRecomendacion(id)
+            val body = recomendacion.execute().body()
+            runOnUiThread {
+                if (body != null) {
+                    var textRecomendacion: TextView = findViewById(R.id.textViewRecomendacion)
+                    textRecomendacion.text = body.recomendacion
+                    Log.d("pantallaRecomendacionesBot", "RecomendacionRequest count:${body.recomendacion}" )
+                    llenarGraficoProgreso(body.pronostico, body.real)
+                } else{
+                    Log.d("pantallaRecomendacionesBot", "RecomendacionRequest terrible" )
+                }
+            }
+        }
+
+        return "hola"
+    }
     private fun llenarRecomendacion(){
+        obtenerRecomendación(1)
         val recomendacion = "No existe hay ninguna recomendación para usted"
-        var textRecomendacion: TextView = findViewById(R.id.textViewRecomendacion)
-        textRecomendacion.text = recomendacion
+        //var textRecomendacion: TextView = findViewById(R.id.textViewRecomendacion)
+        //textRecomendacion.text = recomendacion
     }
 
-    private fun llenarGraficoProgreso(){
+    private fun llenarGraficoProgreso(pron:List<Double>,real:List<Double>){
 
         val lineChartIncomes: LineChart = findViewById(R.id.lineChart)
 
@@ -76,13 +96,13 @@ class zzzz : AppCompatActivity() {
         fecha = formatoFecha.format(calendar.time)
         xvalue.add(fecha)
         val lineentry = ArrayList<Entry>();
-        for (i in 1..diasMes){
-            lineentry.add(Entry(i*1f,20f))
+        for (i in 1..pron.size){
+            lineentry.add(Entry(i*1f,pron[i-1].toFloat()))
         }
 
-        val linedataset = LineDataSet(lineentry,"First")
-        linedataset.color = resources.getColor(R.color.black)
-
+        val linedataset = LineDataSet(lineentry,"Pronostico")
+        linedataset.color = Color.parseColor("#126A74")
+        linedataset.setDrawValues(false)
         val data = LineData(linedataset)
 
         lineChartIncomes.data = data

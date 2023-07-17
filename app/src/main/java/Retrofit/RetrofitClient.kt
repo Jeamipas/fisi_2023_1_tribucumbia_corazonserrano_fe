@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 
 object RetrofitClient {
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://192.168.1.5:8080/api/")
+        .baseUrl("http://192.168.1.10:8080/api/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

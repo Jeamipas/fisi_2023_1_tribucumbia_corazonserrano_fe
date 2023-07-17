@@ -60,12 +60,16 @@ class ld_IngresosActivity : AppCompatActivity() {
         var nuevoG = arrayOf("","","")
 
         thread {
+            Log.d("Id_IngresosActivity", "prueba1")
             val operacion = RetrofitClient.consumirApi.getIngresos(1)
             val body = operacion.execute().body()
+            Log.d("Id_IngresosActivity", "prueba2")
             runOnUiThread {
-
+                Log.d("Id_IngresosActivity", "prueba3")
                 if (body != null) {
+                    Log.d("Id_IngresosActivity", "prueba4")
                     for (i in body) {
+                        Log.d("Id_IngresosActivity", "prueba7")
                         val fechaRegistroSubstring = i.fechaRegistro.substring(0, 10)
 
                         Log.d(
@@ -84,7 +88,7 @@ class ld_IngresosActivity : AppCompatActivity() {
 
 
 
-
+                Log.d("Id_IngresosActivity", "prueba5")
                 for (i in (0 until matriz.count())) {
                     val registro =
                         LayoutInflater.from(this).inflate(R.layout.ld_tabla_ingresos, null, false)
@@ -248,7 +252,3 @@ class ld_IngresosActivity : AppCompatActivity() {
     }
 
 }
-
-
-
-

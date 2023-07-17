@@ -5,12 +5,12 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ConsumirApi {
-    @GET("usuario/getUsuario")
+    @GET("ux-gestion-usuarios/appww/servicio-al-cliente/v1/obtener-datos-usuario")
     fun getUsuario(@Query("idUsuario") idUsuario: Int): Call<Usuario>
 
-    @GET("operaciones/listar-egresos2")
+    @GET("ux-operaciones/appww/servicio-al-cliente/v1/listar-gastos")
     fun getEgresos(@Query("idUsuario") idUsuario: Int): Call<Operacion2>
 
-    @GET("operaciones/listar-ingresos2")
+    @GET("ux-operaciones/appww/servicio-al-cliente/v1/listar-ingresos")
     fun getIngresos(@Query("idUsuario") idUsuario: Int): Call<Operacion2>
 }
